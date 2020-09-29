@@ -60,6 +60,11 @@ export default {
       of: [{ type: "reference", to: { type: "category" } }]
     },
     {
+      name: "videolink",
+      type: "string",
+      title: "Link the video"
+    },
+    {
       name: "body",
       title: "Body",
       type: "projectPortableText"
