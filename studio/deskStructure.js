@@ -2,7 +2,7 @@ import S from "@sanity/desk-tool/structure-builder";
 import MdSettings from "react-icons/lib/md/settings";
 import EyeIcon from "part:@sanity/base/eye-icon";
 import EditIcon from "part:@sanity/base/edit-icon";
-import IframePreview from "./components/IframePreview";
+import IframePreview from "./components/Iframe/IframePreview";
 
 // const previewURL = "http://localhost:8000";
 // const WebPreview = ({ document }) => {
