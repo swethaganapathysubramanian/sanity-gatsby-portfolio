@@ -3,7 +3,7 @@
 }
 
 .iframeContainer iframe {
-  border: 0;
+  border: 1px solid transparent;
   height: 100%;
   left: 0;
   position: absolute;
