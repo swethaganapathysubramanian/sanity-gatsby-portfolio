@@ -10,6 +10,7 @@ import person from "./documents/person";
 import sampleProject from "./documents/sampleProject";
 import siteSettings from "./documents/siteSettings";
 import page from "./documents/page";
+import categories from "./documents/categories";
 // Object types
 import bioPortableText from "./objects/bioPortableText";
 import figure from "./objects/figure";
@@ -39,6 +40,7 @@ export default createSchema({
     person,
     sampleProject,
     siteSettings,
-    page
+    page,
+    categories
   ])
 });
