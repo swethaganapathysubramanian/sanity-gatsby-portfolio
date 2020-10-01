@@ -5,6 +5,7 @@ import serializers from "./serializers";
 
 const BlockContent = ({ blocks }) => {
   console.log(blocks);
+  console.log(serializers);
   return <BaseBlockContent blocks={blocks} serializers={serializers} {...clientConfig.sanity} />;
 };
 

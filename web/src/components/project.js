@@ -9,6 +9,10 @@ import RoleList from "./role-list";
 
 import styles from "./project.module.css";
 
+function createMarkup(html) {
+  return { __html: html };
+}
+
 function Project(props) {
   const {
     _rawBody,
@@ -38,13 +42,9 @@ function Project(props) {
         <div className={styles.grid}>
           <div className={styles.mainContent}>
             <h1 className={styles.title}>{title}</h1>
-            {/* <iframe
-              src={videolink}
-              frameborder="0"
-              allow="autoplay; encrypted-media"
-              allowfullscreen
-              title="video"
-            /> */}
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
             <iframe
               src={videolink}
               title={videolink}
@@ -58,6 +58,7 @@ function Project(props) {
             />
             {_rawBody && <BlockContent blocks={_rawBody || []} />}
           </div>
+          <div dangerouslySetInnerHTML={createMarkup(`https://www.instagram.com/p/Zw9o4/`)} />
           <aside className={styles.metaContent}>
             {publishedAt && (
               <div className={styles.publishedAt}>
@@ -77,6 +78,7 @@ function Project(props) {
                 </ul>
               </div>
             )}
+
             {relatedProjects && relatedProjects.length > 0 && (
               <div className={styles.relatedProjects}>
                 <h3 className={styles.relatedProjectsHeadline}>Related projects</h3>

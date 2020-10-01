@@ -6,6 +6,13 @@ const highlightRender = props => (
   <span style={{ backgroundColor: "yellow" }}>{props.children}</span>
 );
 
+// const lineRender = () => (
+//   <hr
+//     style={{
+//       height: 5
+//     }}
+//   />
+// );
 export default {
   title: "Portable Text",
   name: "projectPortableText",
@@ -44,7 +51,15 @@ export default {
             }
           },
           { title: "Underline", value: "underline" },
-          { title: "Strike", value: "strike-through" }
+          { title: "Strike", value: "strike-through" },
+          { title: "Code", value: "code" }
+          // {
+          //   title: "Horizontal Line",
+          //   value: "horizontalline",
+          //   blockEditor: {
+          //     render: lineRender
+          //   }
+          // }
         ],
         // Annotations can be any object structure – e.g. a link or a footnote.
         annotations: [
@@ -89,6 +104,15 @@ export default {
     },
     {
       type: "figure"
+    },
+    {
+      type: "line"
+    },
+    {
+      type: "tweet"
+    },
+    {
+      type: "instagram"
     }
   ]
 };

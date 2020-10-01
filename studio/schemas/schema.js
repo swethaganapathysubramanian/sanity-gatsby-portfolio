@@ -18,7 +18,9 @@ import projectMember from "./objects/projectMember";
 import projectPortableText from "./objects/projectPortableText";
 import simplePortableText from "./objects/simplePortableText";
 import youtube from "./objects/youtube";
-
+import line from "./objects/line";
+import tweet from "./objects/tweet";
+import instagram from "./objects/instagram";
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
   // We name our schema
@@ -34,6 +36,9 @@ export default createSchema({
     projectPortableText,
     simplePortableText,
     youtube,
+    line,
+    tweet,
+    instagram,
     // The following are document types which will appear
     // in the studio.
     category,
