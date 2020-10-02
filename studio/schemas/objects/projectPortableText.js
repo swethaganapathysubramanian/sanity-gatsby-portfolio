@@ -6,6 +6,14 @@ const highlightRender = props => (
   <span style={{ backgroundColor: "yellow" }}>{props.children}</span>
 );
 
+const fontIcon = () => <span style={{ fontWeight: "bold" }}>Font-sans</span>;
+const fontRender = props => <span style={{ fontFamily: "sans-serif" }}>{props.children}</span>;
+
+const fontSerifIcon = () => <span style={{ fontWeight: "bold" }}>Font-Serif</span>;
+const fontSerifRender = props => (
+  <span style={{ fontFamily: "Times New Roman" }}>{props.children}</span>
+);
+
 export default {
   title: "Portable Text",
   name: "projectPortableText",
@@ -29,10 +37,7 @@ export default {
         { title: "Quote", value: "blockquote" }
       ],
 
-      lists: [
-        { title: "Bullet", value: "bullet" },
-        { title: "Numbered", value: "number" }
-      ],
+      lists: [{ title: "Bullet", value: "bullet" }, { title: "Numbered", value: "number" }],
       // Marks let you mark up inline text in the block editor.
       marks: {
         // Decorators usually describe a single property – e.g. a typographic
@@ -50,7 +55,23 @@ export default {
           },
           { title: "Underline", value: "underline" },
           { title: "Strike", value: "strike-through" },
-          { title: "Code", value: "code" }
+          { title: "Code", value: "code" },
+          {
+            title: "Font-sans",
+            value: "fontsans",
+            blockEditor: {
+              icon: fontIcon,
+              render: fontRender
+            }
+          },
+          {
+            title: "Font-serif",
+            value: "fontserif",
+            blockEditor: {
+              icon: fontSerifIcon,
+              render: fontSerifRender
+            }
+          }
           // {
           //   title: "Horizontal Line",
           //   value: "horizontalline",
