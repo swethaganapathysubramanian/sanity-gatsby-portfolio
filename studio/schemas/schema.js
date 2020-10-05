@@ -11,6 +11,7 @@ import sampleProject from "./documents/sampleProject";
 import siteSettings from "./documents/siteSettings";
 import page from "./documents/page";
 import categories from "./documents/categories";
+import menu from "./documents/menu";
 // Object types
 import bioPortableText from "./objects/bioPortableText";
 import figure from "./objects/figure";
@@ -21,6 +22,9 @@ import youtube from "./objects/youtube";
 import line from "./objects/line";
 import tweet from "./objects/tweet";
 import instagram from "./objects/instagram";
+import submenu from "./objects/subMenu";
+import secondarysubmenu from "./objects/secondarySubMenu";
+import titleslug from "./objects/titleslug";
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
   // We name our schema
@@ -39,6 +43,9 @@ export default createSchema({
     line,
     tweet,
     instagram,
+    submenu,
+    titleslug,
+    secondarysubmenu,
     // The following are document types which will appear
     // in the studio.
     category,
@@ -46,6 +53,7 @@ export default createSchema({
     sampleProject,
     siteSettings,
     page,
-    categories
+    categories,
+    menu
   ])
 });
